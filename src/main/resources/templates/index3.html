@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <table width="800px" style="text-align: center">
+      <tr>
+          <td>序号</td>
+          <td>用户id</td>
+          <td>用户name</td>
+          <td>用户age</td>
+      </tr>
+      <tr th:each="user,start:${list}">
+          <!--<td th:text="${start.index+1}"></td>  索引0-->
+          <!--<td th:text="${start.count}"></td> 索引1-->
+          <!--<td th:text="${start.size}"></td> 集合大小-->
+          <!--<td th:text="${start.current}"></td> 当前对象-->
+          <!--<td th:text="${start.odd}"></td> 奇数-->
+          <!--<td th:text="${start.first}"></td> 是否第一个元素-->
+          <td th:text="${user.id}"></td>
+          <td th:text="${user.name}"></td>
+          <td th:text="${user.age}"></td>
+      </tr>
+  </table>
+</body>
+</html>
